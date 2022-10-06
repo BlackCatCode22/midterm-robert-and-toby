@@ -1,5 +1,4 @@
 import java.io.File;
-import java.util.BitSet;
 import java.util.Scanner;
 import java.io.FileNotFoundException;
 import java.util.Random;
@@ -8,9 +7,10 @@ import java.util.HashMap;
 
 public class ZooAnimals {
     public static void main(String[] args){
-        HashMap<String, String[]> animalData = new HashMap<String, String[]>();
+        HashMap<String, String[]> allAnimalData = new HashMap<String, String[]>();
         HashMap<String, Boolean> usedNames = new HashMap<String, Boolean>();
         Random rand = new Random();
+        String[][] zooIds = new String[4][4];
 
         // Get Names
         String animalNamesFilePath = new File("").getAbsolutePath();
@@ -70,31 +70,72 @@ public class ZooAnimals {
             e.printStackTrace();
         }
 
+        for (int i = 0; i < 16; i++) {
+            addAnimal(unParsedData[i], allAnimalData, allNames, usedNames, zooIds);
+        }
 
-
-        // Parse Data
-        int dataNumber = 7;
-        String[] currentAnimalData = new String[8];
-        currentAnimalData[0] = unParsedData[dataNumber][0].split(" ")[0];
-        currentAnimalData[1] = genBirthDay(currentAnimalData[0], unParsedData[dataNumber][1]);
-        currentAnimalData[2] = unParsedData[dataNumber][2].replace(" color", "");
-        currentAnimalData[3] = unParsedData[dataNumber][3].split(" ")[0];
-        currentAnimalData[4] = unParsedData[dataNumber][4].replace("from ", "");
-        currentAnimalData[5] = unParsedData[dataNumber][5];
-        currentAnimalData[6] = unParsedData[dataNumber][0].split(" ")[4].substring(0, 1).toUpperCase() + unParsedData[dataNumber][0].split(" ")[4].substring(1, 2);
-        currentAnimalData[7] = genName(usedNames, allNames, currentAnimalData[6]);
-
-
-        //Put data into animalData HashMap
-        genId(animalData, currentAnimalData[6], currentAnimalData);
-        System.out.println(animalData.get("Li01")[1]);
+        for (String[] t:zooIds){
+            for (String l:t){
+                System.out.println(l);
+            }
+        }
     }
-    public static void genId(HashMap<String, String[]> animals, String species, String[] data){
+    
+    public static void addAnimal(String[] animalData, HashMap<String, String[]> allAnimalData, String[][] names,HashMap<String, Boolean> usedNames, String[][] zoo){
+        String[] currentAnimalData = new String[9];
+        currentAnimalData[0] = animalData[0].split(" ")[0];
+        currentAnimalData[1] = genBirthDay(currentAnimalData[0], animalData[1]);
+        currentAnimalData[2] = animalData[2].replace(" color", "");
+        currentAnimalData[3] = animalData[3].split(" ")[0];
+        currentAnimalData[4] = animalData[4].replace("from ", "");
+        currentAnimalData[5] = animalData[5];
+        currentAnimalData[6] = animalData[0].split(" ")[4].substring(0, 1).toUpperCase() + animalData[0].split(" ")[4].substring(1, 2);
+        currentAnimalData[7] = genName(usedNames, names, currentAnimalData[6]);
+        if (animalData[0].contains("female")) {
+            currentAnimalData[8] = "female";
+        } else {
+            currentAnimalData[8] = "male";
+        }
+
+        int speciesId;
+        switch (currentAnimalData[6]){
+            case "Hy":
+                speciesId = 0;
+                break;
+            case "Li":
+                speciesId = 1;
+                break;
+            case "Be":
+                speciesId = 2;
+                break;
+            case "Ti":
+                speciesId = 3;
+                break;
+            default:
+                System.out.println("This animal is not compatible with out zoo.");
+                return;
+        }
+        for (int i = 0; i < 4; i++) {
+            if (zoo[speciesId][i] == null) {
+                zoo[speciesId][i] = genId(allAnimalData, currentAnimalData[6], currentAnimalData);
+                System.out.println(currentAnimalData[7] + " was successfully added to the zoo!");
+                return;
+            }
+        }
+        System.out.println("There was no space for the animal.");
+    }
+    
+    
+    public static String genId(HashMap<String, String[]> animals, String species, String[] data){
+        String id = "";
         for (int i = 0; i < 4; i++){
                 if (!animals.containsKey((species + 0) + (i+1))){
-                    animals.put((species + 0) + (i+1), data);
+                    id = (species + 0) + (i+1);
+                    break;
                 }
         }
+        animals.put(id, data);
+        return id;
     }
 
     public static String genBirthDay(String age, String unparsedSeason){
