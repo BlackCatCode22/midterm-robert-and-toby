@@ -143,28 +143,28 @@ public class ZooAnimals {
             writer.write("Hyena Habitat: \n\n");
             for (int i = 0; i < 4; i++){
                     if (zoo[0][i] != null) {
-                        writer.write(toTextData(allAnimalData.get(zoo[0][i]), zoo[0][i]) + "\n");
+                        writer.write(toText(zoo[0][i], allAnimalData) + "\n");
                 }
             }
 
             writer.write("\nLion Habitat: \n\n");
             for (int i = 0; i < 4; i++){
                 if (zoo[1][i] != null) {
-                    writer.write(toTextData(allAnimalData.get(zoo[1][i]), zoo[1][i]) + "\n");
+                    writer.write(toText(zoo[1][i], allAnimalData) + "\n");
                 }
             }
 
             writer.write("\nBear Habitat: \n\n");
             for (int i = 0; i < 4; i++){
                 if (zoo[2][i] != null) {
-                    writer.write(toTextData(allAnimalData.get(zoo[2][i]), zoo[2][i]) + "\n");
+                    writer.write(toText(zoo[2][i], allAnimalData) + "\n");
                 }
             }
 
             writer.write("\nTiger Habitat: \n\n");
             for (int i = 0; i < 4; i++){
                 if (zoo[3][i] != null) {
-                    writer.write(toTextData(allAnimalData.get(zoo[2][i]), zoo[3][i]) + "\n");
+                    writer.write(toText(zoo[3][i], allAnimalData) + "\n");
                 }
             }
             writer.close();
