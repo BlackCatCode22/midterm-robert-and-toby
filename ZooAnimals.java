@@ -13,6 +13,7 @@ public class ZooAnimals {
         HashMap<String, Boolean> usedNames = new HashMap<String, Boolean>();
         Random rand = new Random();
         String[][] zooIds = new String[4][4];
+        genZooHabitats(zooIds, allAnimalData);
 
         // Get Names
         String animalNamesFilePath = new File("").getAbsolutePath();
@@ -45,12 +46,12 @@ public class ZooAnimals {
         int lineCount = 0;
         try {
             File dataFile = new File(arrivingDataFilePath);
-            Scanner scannerBob = new Scanner(dataFile);
-            while (scannerBob.hasNextLine()){
+            Scanner scanner = new Scanner(dataFile);
+            while (scanner.hasNextLine()){
                 lineCount++;
-                scannerBob.nextLine();
+                scanner.nextLine();
             }
-            scannerBob.close();
+            scanner.close();
 
         } catch (FileNotFoundException e){
             System.out.println("Bad");
@@ -61,13 +62,13 @@ public class ZooAnimals {
         try {
             File dataFile = new File(arrivingDataFilePath);
             unParsedData = new String[lineCount][0];
-            Scanner scannerBob = new Scanner(dataFile);
+            Scanner scanner = new Scanner(dataFile);
             int i = 0;
-            while (scannerBob.hasNextLine()){
-                unParsedData[i] = scannerBob.nextLine().split(", ");
+            while (scanner.hasNextLine()){
+                unParsedData[i] = scanner.nextLine().split(", ");
                 i++;
             }
-            scannerBob.close();
+            scanner.close();
         } catch (FileNotFoundException e){
             System.out.println("Bad");
             e.printStackTrace();
@@ -80,12 +81,12 @@ public class ZooAnimals {
         lineCount = 0;
         try {
             File dataFile = new File(zooDataFilepath);
-            Scanner scannerBob = new Scanner(dataFile);
-            while (scannerBob.hasNextLine()){
+            Scanner scanner = new Scanner(dataFile);
+            while (scanner.hasNextLine()){
                 lineCount++;
-                scannerBob.nextLine();
+                scanner.nextLine();
             }
-            scannerBob.close();
+            scanner.close();
 
         } catch (FileNotFoundException e){
             System.out.println("Bad");
@@ -94,14 +95,14 @@ public class ZooAnimals {
 
         try {
             File dataFile = new File(zooDataFilepath);
-            Scanner scannerBob = new Scanner(dataFile);
+            Scanner scanner = new Scanner(dataFile);
             unParsedZooData = new String[lineCount];
             int i = 0;
-            while (scannerBob.hasNextLine()){
-                unParsedZooData[i] = scannerBob.nextLine();
+            while (scanner.hasNextLine()){
+                unParsedZooData[i] = scanner.nextLine();
                 i++;
             }
-            scannerBob.close();
+            scanner.close();
 
         } catch (FileNotFoundException e){
             System.out.println("Bad");
@@ -117,6 +118,11 @@ public class ZooAnimals {
         }
 
         updatePopulation(allAnimalData, zooIds);
+    }
+
+    public static void genZooHabitats(String[][] zoo, HashMap<String, String[]> map){
+        zoo  = new String[4][4];
+        map.clear();
     }
 
     public static void updatePopulation(HashMap<String, String[]> allAnimalData, String[][] zoo){
@@ -227,7 +233,7 @@ public class ZooAnimals {
         currentAnimalData[4] = animalData[4].replace("from ", "");
         currentAnimalData[5] = animalData[5];
         currentAnimalData[6] = animalData[0].split(" ")[4].substring(0, 1).toUpperCase() + animalData[0].split(" ")[4].substring(1, 2);
-        currentAnimalData[7] = genName(usedNames, names, currentAnimalData[6]);
+        currentAnimalData[7] = genAnimalName(usedNames, names, currentAnimalData[6]);
         if (animalData[0].contains("female")) {
             currentAnimalData[8] = "female";
         } else {
@@ -254,7 +260,7 @@ public class ZooAnimals {
         }
         for (int i = 0; i < 4; i++) {
             if (zoo[speciesId][i] == null) {
-                zoo[speciesId][i] = genId(allAnimalData, currentAnimalData[6], currentAnimalData);
+                zoo[speciesId][i] = genUanimalID(allAnimalData, currentAnimalData[6], currentAnimalData);
                 System.out.println(currentAnimalData[7] + " was successfully added to the zoo!");
                 return;
             }
@@ -263,7 +269,7 @@ public class ZooAnimals {
     }
     
     
-    public static String genId(HashMap<String, String[]> animals, String species, String[] data){
+    public static String genUanimalID(HashMap<String, String[]> animals, String species, String[] data){
         String id = "";
         for (int i = 0; i < 4; i++){
                 if (!animals.containsKey((species + 0) + (i+1))){
@@ -292,7 +298,7 @@ public class ZooAnimals {
         return birthday;
     }
 
-    public static String genName(HashMap<String, Boolean> used, String[][] names, String species){
+    public static String genAnimalName(HashMap<String, Boolean> used, String[][] names, String species){
         int speciesId;
         Random rand = new Random();
         switch (species){
