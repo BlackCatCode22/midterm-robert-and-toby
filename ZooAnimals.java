@@ -178,7 +178,7 @@ public class ZooAnimals {
         String text;
 
         String[] data = allAnimalData.get(id);
-        text = id + "; " + data[7] + "; " + data[0] + " years old; birth date " + data[1] + "; " + data[2] + " color; " + data[8] + "; " + data[3] + " pounds; from " + data[4] + ", " + data[5];
+        text = id + "; " + data[7] + "; " + data[0] + " years old; birthdate: " + data[1] + "; " + data[2] + " color; " + data[8] + "; " + data[3] + " pounds; from " + data[4] + ", " + data[5];
 
         return text;
     }

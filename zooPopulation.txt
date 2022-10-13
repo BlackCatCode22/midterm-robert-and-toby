@@ -1,27 +1,27 @@
 Hyena Habitat: 
 
-Hy01; Kamari; 4 years old; birth date Mar 21, 2018; tan color; female; 70 pounds; from Friguia Park, Tunisia
-Hy02; Madoa; 4 years old; birth date Mar 21, 2018; tan color; female; 70 pounds; from Friguia Park, Tunisia
-Hy03; Lou; 12 years old; birth date Sept 21, 2010; brown color; male; 150 pounds; from Friguia Park, Tunisia
-Hy04; Bud; 4 years old; birth date Mar 21, 2018; black color; male; 120 pounds; from Friguia Park, Tunisia
+Hy01; Kamari; 4 years old; birthdate: Mar 21, 2018; tan color; female; 70 pounds; from Friguia Park, Tunisia
+Hy02; Madoa; 4 years old; birthdate: Mar 21, 2018; tan color; female; 70 pounds; from Friguia Park, Tunisia
+Hy03; Lou; 12 years old; birthdate: Sept 21, 2010; brown color; male; 150 pounds; from Friguia Park, Tunisia
+Hy04; Bud; 4 years old; birthdate: Mar 21, 2018; black color; male; 120 pounds; from Friguia Park, Tunisia
 
 Lion Habitat: 
 
-Li01; Kiara; 6 years old; birth date Sept 21, 2016; tan color; female; 305 pounds; from Zanzibar, Tanzania
-Li02; Samson; 6 years old; birth date Mar 21, 2016; tan color; female; 300 pounds; from Zanzibar, Tanzania
-Li03; Kimba; 12 years old; birth date Dec 21, 2010; dark tan color; female; 375 pounds; from KopeLion, Tanzania
-Li04; Nala; 22 years old; birth date Sept 21, 2000; golden color; male; 450 pounds; from Zanzibar, Tanzania
+Li01; Kiara; 6 years old; birthdate: Sept 21, 2016; tan color; female; 305 pounds; from Zanzibar, Tanzania
+Li02; Samson; 6 years old; birthdate: Mar 21, 2016; tan color; female; 300 pounds; from Zanzibar, Tanzania
+Li03; Kimba; 12 years old; birthdate: Dec 21, 2010; dark tan color; female; 375 pounds; from KopeLion, Tanzania
+Li04; Nala; 22 years old; birthdate: Sept 21, 2000; golden color; male; 450 pounds; from Zanzibar, Tanzania
 
 Bear Habitat: 
 
-Be01; Rupert; 7 years old; birth date Mar 21, 2015; brown color; male; 320 pounds; from Alaska Zoo, Alaska
-Be02; Smokey; 25 years old; birth date Mar 21, 1997; black color; female; 425 pounds; from Woodland park Zoo, Washington 
-Be03; Bungle; 4 years old; birth date Sept 21, 2018; black color; female; 355 pounds; from Woodland park Zoo, Washington 
-Be04; Winnie the Pooh; 4 years old; birth date Mar 21, 2018; brown color; male; 405 pounds; from Alaska Zoo, Alaska
+Be01; Rupert; 7 years old; birthdate: Mar 21, 2015; brown color; male; 320 pounds; from Alaska Zoo, Alaska
+Be02; Smokey; 25 years old; birthdate: Mar 21, 1997; black color; female; 425 pounds; from Woodland park Zoo, Washington 
+Be03; Bungle; 4 years old; birthdate: Sept 21, 2018; black color; female; 355 pounds; from Woodland park Zoo, Washington 
+Be04; Winnie the Pooh; 4 years old; birthdate: Mar 21, 2018; brown color; male; 405 pounds; from Alaska Zoo, Alaska
 
-Tiger Habitat   :
+Tiger Habitat: 
 
-Ti01; Dave; 2 years old; birth date Mar 21, 2020; gold and tan stripes color; male; 270 pounds; from Dhaka, Bangladesh
-Ti02; Jiba; 4 years old; birth date Mar 21, 2018; black stripes color; female; 400 pounds; from Dhaka, Bangladesh
-Ti03; Tony; 18 years old; birth date Sept 21, 2004; gold and tan color; male; 300 pounds; from Bardia, Nepal
-Ti04; Tigger; 3 years old; birth date Mar 21, 2019; black stripes color; female; 285 pounds; from Bardia, Nepal
+Ti01; Dave; 2 years old; birthdate: Mar 21, 2020; gold and tan stripes color; male; 270 pounds; from Dhaka, Bangladesh
+Ti02; Jiba; 4 years old; birthdate: Mar 21, 2018; black stripes color; female; 400 pounds; from Dhaka, Bangladesh
+Ti03; Tony; 18 years old; birthdate: Sept 21, 2004; gold and tan color; male; 300 pounds; from Bardia, Nepal
+Ti04; Tigger; 3 years old; birthdate: Mar 21, 2019; black stripes color; female; 285 pounds; from Bardia, Nepal
