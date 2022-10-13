@@ -1,7 +1,27 @@
-Hyena Habitat:
+Hyena Habitat: 
 
-Hy01; Kamari; 4 years old; birth date Mar 21, 2018; tan color; female; 70 pounds; from Friguia Park, Tunisia; arrived Sept 27, 2022
+4; Mar 21, 2018; tan; 70; Friguia Park; Tunisia; Hy; Kamari; female; Hy01
+4; Mar 21, 2018; tan; 70; Friguia Park; Tunisia; Hy; Madoa; female; Hy02
+12; Sept 21, 2010; brown; 150; Friguia Park; Tunisia; Hy; Lou; male; Hy03
+4; Mar 21, 2018; black; 120; Friguia Park; Tunisia; Hy; Bud; male; Hy04
 
-Lion Habitat:
+Lion Habitat: 
 
-Li01; Kiara; 6 years old; birth date Sept 21, 2016; tan color; female; 305 pounds; from Zanzibar, Tanzania; arrived Sept 23, 2022
+6; Sept 21, 2016; tan; 305; Zanzibar; Tanzania; Li; Kiara; female; Li01
+6; Mar 21, 2016; tan; 300; Zanzibar; Tanzania; Li; Samson; female; Li02
+12; Dec 21, 2010; dark tan; 375; KopeLion; Tanzania; Li; Kimba; female; Li03
+22; Sept 21, 2000; golden; 450; Zanzibar; Tanzania; Li; Nala; male; Li04
+
+Bear Habitat: 
+
+7; Mar 21, 2015; brown; 320; Alaska Zoo; Alaska; Be; Rupert; male; Be01
+25; Mar 21, 1997; black; 425; Woodland park Zoo; Washington ; Be; Smokey; female; Be02
+4; Sept 21, 2018; black; 355; Woodland park Zoo; Washington ; Be; Bungle; female; Be03
+4; Mar 21, 2018; brown; 405; Alaska Zoo; Alaska; Be; Winnie the Pooh; male; Be04
+
+Tiger Habitat: 
+
+7; Mar 21, 2015; brown; 320; Alaska Zoo; Alaska; Be; Rupert; male; Ti01
+25; Mar 21, 1997; black; 425; Woodland park Zoo; Washington ; Be; Smokey; female; Ti02
+4; Sept 21, 2018; black; 355; Woodland park Zoo; Washington ; Be; Bungle; female; Ti03
+4; Mar 21, 2018; brown; 405; Alaska Zoo; Alaska; Be; Winnie the Pooh; male; Ti04
