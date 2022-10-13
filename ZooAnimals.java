@@ -205,23 +205,13 @@ public class ZooAnimals {
             currentAnimalData[i] = splitData[i];
         }
         allAnimalData.put(splitData[9], currentAnimalData);
-        int speciesId = 0;
-        switch (splitData[9].split("0")[0]) {
-            case "Hy":
-                speciesId = 0;
-                break;
-            case "Li":
-                speciesId = 1;
-                break;
-            case "Be":
-                speciesId = 2;
-                break;
-            case "Ti":
-                speciesId = 3;
-                break;
-            default:
-                speciesId = 0;
-        }
+        int speciesId = switch (splitData[9].split("0")[0]) {
+            case "Hy" -> 0;
+            case "Li" -> 1;
+            case "Be" -> 2;
+            case "Ti" -> 3;
+            default -> 0;
+        };
         zoo[speciesId][Integer.parseInt(splitData[9].split("0")[1])-1] = splitData[9];
     }
     public static void addAnimal(String[] animalData, HashMap<String, String[]> allAnimalData, String[][] names,HashMap<String, Boolean> usedNames, String[][] zoo){
